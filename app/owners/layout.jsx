@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <div className="flex bg-gray-100">
+    <div className="flex bg-gray-100 h-screen">
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
       <div className="flex-1 flex flex-col overflow-hidden">
         <Header {...getHeaderProps()} />

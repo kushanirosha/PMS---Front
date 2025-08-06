@@ -8,8 +8,8 @@ import { usePathname } from 'next/navigation';
 const Sidebar = ({ activeTab, onTabChange }) => {
   const menuItems = [
     { id: '/owners/dashboard', icon: Home, label: 'Dashboard' },
-    { id: '/owners/properties', icon: Building, label: 'Properties' },
-    { id: '/owners/tenants', icon: Users, label: 'Tenants' },
+    { id: '/owners/properties/property-list', icon: Building, label: 'Properties' },
+    { id: '/owners/tenants/tenants-list', icon: Users, label: 'Tenants' },
     { id: '/owners/finance', icon: DollarSign, label: 'Finance' },
     { id: '/owners/notification', icon: MessageCircle, label: 'Messages' },
   ];
@@ -37,7 +37,7 @@ const Sidebar = ({ activeTab, onTabChange }) => {
               onClick={() => onTabChange(item.id)}
               className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
                 activeTab === item.id
-                  ? 'bg-green-50 text-green-600 border-r-2 border-green-500'
+                  ? 'bg-green-100 text-green-600 border-r-2 border-green-500'
                   : 'text-gray-600 hover:bg-gray-50'
               }`}
             >
